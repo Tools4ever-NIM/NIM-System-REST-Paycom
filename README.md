@@ -1,6 +1,6 @@
 # Paycom
 
-<img src="https://github.com/Tools4ever-NIM/NIM-System-Powershell-Workday/assets/24281600/0ed4b951-1a4d-403c-8238-c22c1e747ba1" width="256px" />
+<img src="https://www.tools4ever.nl/connector-logos/paycom-logo.png" width="256px" />
 
 ## Data Tables
 - employeeids
