@@ -1,0 +1,326 @@
+{
+    "schema": {
+      "options": {},
+      "crud_objects": {
+        "employeeids": {
+            "operations": {
+              "employeeidsList": {
+                "method": "get",
+                "call": {
+                  "mode": "normal",
+                  "path": "/api/v1/employeeid"
+                },
+                "processing_options": {
+                  "output_field": "data"
+                },
+                "query_parameters": {
+                }
+              }
+            },
+            "parameters": {},
+            "key": "eecode",
+            "resources": {
+              "eecode": "string*",
+              "eebadge": "string*",
+              "clockseq": "string*",
+              "firstname": "string*",
+              "middlename": "string*",
+              "lastname": "string*"
+            }
+        },
+        "employees": {
+                "operations": {
+                    "employeesList": {
+                        "method": "get",
+                        "call": {
+                            "mode": "iteration",
+                            "table": "employeeids",
+                            "iterator": "eecode",
+                            "path": "/api/v1/employee/{iterator}"
+                        },
+                        "processing_options": {
+                            "output_field": "data"
+                        },
+                        "query_parameters": {
+                        },
+                        "maxSessionCount": 20
+                    }
+                },
+                "parameters": {},
+                "key": "employee_code",
+                "resources": {
+                    "actual_marital_status": "string",
+                    "actual_marital_status_description": "string",
+                    "age": "string",
+                    "alternate_pay_frequency": "string*",
+                    "apt_suite_other": "string",
+                    "available_health_insurance": "string",
+                    "birth_date": "string*",
+                    "business_title": "string*",
+                    "city": "string",
+                    "clocksequencenumber": "string*",
+                    "cobra_end": "string",
+                    "cobra_start": "string",
+                    "comission_only": "string",
+                    "country_paid_in": "string",
+                    "current_key_employee": "string*",
+                    "custom_standard_hours": "string",
+                    "department_code": "string*",
+                    "department_description": "string*",
+                    "eeoc_class": "string*",
+                    "eeoc_class_description": "string*",
+                    "ee_message": "string*",
+                    "eligible_401k": "string",
+                    "emergency_1_contact": "string",
+                    "emergency_1_phone": "string",
+                    "emergency_1_phone_country_code": "string",
+                    "emergency_1_relationship": "string",
+                    "emergency_2_contact": "string",
+                    "emergency_2_phone": "string",
+                    "emergency_2_phone_country_code": "string",
+                    "emergency_2_relationship": "string",
+                    "emergency_3_contact": "string",
+                    "emergency_3_phone": "string",
+                    "emergency_3_phone_country_code": "string",
+                    "emergency_3_relationship": "string",
+                    "employee_added": "string",
+                    "employee_badge": "string*",
+                    "employee_code": "string*",
+                    "employee_gl_code": "string*",
+                    "employee_name": "string*",
+                    "employee_status": "string*",
+                    "employee_supervisor_level": "string",
+                    "employee_supervisor_pin": "string",
+                    "employee_terminal_group": "string",
+                    "employee_terminal_group_description": "string",
+                    "employee_type_1099": "string",
+                    "ethnic_background": "string",
+                    "firstname": "string",
+                    "fulltime_or_parttime": "string*",
+                    "gender": "string",
+                    "has_direct_deposit": "string",
+                    "highly_comp_employee": "string",
+                    "hire_date": "string*",
+                    "hourly_or_salary": "string",
+                    "hours_401k": "string",
+                    "labor_allocation_details": "string",
+                    "labor_allocation_profile": "string",
+                    "lastname": "string*",
+                    "last_pay_change": "string",
+                    "last_position_change_date": "string",
+                    "last_review": "string",
+                    "leave_end": "string",
+                    "leave_start": "string",
+                    "length_of_service_since_hire": "string",
+                    "length_of_service_since_rehire": "string",
+                    "location": "string*",
+                    "match_eligible": "string",
+                    "manager_level": "string",
+                    "middlename": "string*",
+                    "most_recent_check_date": "string",
+                    "new_hire": "string",
+                    "new_hire_report_date": "string",
+                    "next_review": "string",
+                    "nickname": "string*",
+                    "non_resident_alien": "string",
+                    "parttime_to_fulltime_date": "string",
+                    "part_num_401k": "string",
+                    "participation_401k": "string",
+                    "pay_class": "string*",
+                    "pay_frequency": "string",
+                    "personal_email": "string*",
+                    "position": "string*",
+                    "position_code": "string*",
+                    "position_family": "string*",
+                    "position_family_code": "string*",
+                    "position_family_name": "string*",
+                    "position_id": "string*",
+                    "position_level": "string*",
+                    "position_seat_number": "string*",
+                    "position_seat_title": "string*",
+                    "position_title": "string*",
+                    "previous_termination_date": "string",
+                    "primary_phone": "string*",
+                    "primary_phone_country_code": "string*",
+                    "primary_phone_type": "string*",
+                    "primary_phone_work_extension": "string*",
+                    "primary_schedule_group_description": "string",
+                    "print_ee_message": "string*",
+                    "rehire_date": "string",
+                    "report_new_hire": "string",
+                    "retirement_plan": "string",
+                    "schedule_group": "string",
+                    "schedule_time_zone": "string",
+                    "secondary_phone": "string",
+                    "secondary_phone_country_code": "string",
+                    "secondary_phone_type": "string",
+                    "secondary_phone_work_extension": "string",
+                    "seniority_date": "string",
+                    "state": "string",
+                    "statutory_employee": "string",
+                    "street": "string",
+                    "supervisor_approval": "string",
+                    "supervisor_approval_code": "string",
+                    "supervisor_primary": "string",
+                    "supervisor_primary_code": "string",
+                    "supervisor_quaternary": "string",
+                    "supervisor_quaternary_code": "string",
+                    "supervisor_secondary": "string",
+                    "supervisor_secondary_code": "string",
+                    "supervisor_talent": "string",
+                    "supervisor_talent_management": "string",
+                    "supervisor_tertiary": "string",
+                    "supervisor_tertiary_code": "string",
+                    "termination_reason": "string",
+                    "termination_type": "string",
+                    "termination_date": "string*",
+                    "union_code": "string*",
+                    "vets_4212_emp_category": "string",
+                    "vets_4212_job_category": "string",
+                    "workers_comp_code": "string",
+                    "workers_comp_desc": "string",
+                    "work_email": "string*",
+                    "zipcode": "string",
+                    "cat1": "string",
+                    "cat1desc": "string",
+                    "cat2": "string",
+                    "cat2desc": "string",
+                    "cat3": "string",
+                    "cat3desc": "string",
+                    "cat4": "string",
+                    "cat4desc": "string",
+                    "cat5": "string",
+                    "cat5desc": "string",
+                    "cat6": "string",
+                    "cat6desc": "string",
+                    "cat7": "string",
+                    "cat7desc": "string",
+                    "cat8": "string",
+                    "cat8desc": "string",
+                    "cat9": "string",
+                    "cat9desc": "string",
+                    "cat10": "string",
+                    "cat10desc": "string",
+                    "cat11": "string",
+                    "cat11desc": "string",
+                    "cat12": "string",
+                    "cat12desc": "string",
+                    "cat13": "string",
+                    "cat13desc": "string",
+                    "cat14": "string",
+                    "cat14desc": "string",
+                    "cat15": "string",
+                    "cat15desc": "string",
+                    "cat16": "string",
+                    "cat16desc": "string",
+                    "cat17": "string",
+                    "cat17desc": "string",
+                    "cat18": "string",
+                    "cat18desc": "string",
+                    "cat19": "string",
+                    "cat19desc": "string",
+                    "cat20": "string",
+                    "cat20desc": "string",
+                    "companyLocationId": "string*",
+                    "companyEstablishmentId": "string",
+                    "dol_status": "string*",
+                    "exempt_status": "string"
+                }
+            },
+        "locations": {
+            "operations": {
+              "locationsList": {
+                "method": "get",
+                "call": {
+                  "mode": "normal",
+                  "path": "/api/v1/cl/locations"
+                },
+                "processing_options": {
+                  "output_field": "data"
+                },
+                "query_parameters": {
+                }
+              }
+            },
+            "parameters": {},
+            "key": "locationid",
+            "resources": {
+              "locationid": "string*",
+              "description": "string*",
+              "facilityId": "string*",
+              "address": "string*",
+              "city": "string*",
+              "state": "string*",
+              "zipCode": "string*",
+              "country": "string*",
+              "EEOC_Unit_Number": "string*",
+              "hiringSite": "string*",
+              "VETS_4212_Hiring_Location": "string*",
+              "locationHidden": "string*"
+            }
+        }
+      }
+    },
+    "rest": {
+      "config": {
+        "baseUrl": "https://{tenant_id}",
+        "get": {
+          "query_parameters": {},
+          "pagination":{
+                    "mode":"generic",
+                    "path":[],
+                    "params":{
+                        "page":"{page_number}",
+                        "pagesize":"{page_size}"
+                    }
+                }
+        },
+        "authentication": "basic_auth",
+        "call_handling": "generic",
+        "test_connection": {
+          "url": "/api/v1/employeeid?pagesize=1"
+        },
+        "socket_timeout": 3600000,
+        "retry": [
+            {
+                "type": "statusCode",
+                "statusCode": 429,
+                "retry": {
+                    "type": "simple",
+                    "maxCount": 12,
+                    "waitTime": 5
+                }
+            },
+            {
+                "type": "statusCode",
+                "statusCode": 500,
+                "retry": {
+                    "type": "simple",
+                    "maxCount": 12,
+                    "waitTime": 5
+                }
+            },
+            {
+                "type": "connectionError"
+            }
+        ],
+        "accept": "application/json"
+      }
+    },
+    "connection": {
+      "items": [
+        {
+          "name": "tenant_id",
+          "type": "textbox",
+          "label": "Tenant URL:",
+          "value": "api.paycomonline.net/v4/rest/index.php"
+      },
+        {
+          "name": "page_size",
+          "type": "textbox",
+          "label": "Page Size:",
+          "value": "500"
+      }
+      ]
+    }
+  }
