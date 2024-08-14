@@ -265,15 +265,7 @@
       "config": {
         "baseUrl": "https://{tenant_id}",
         "get": {
-          "query_parameters": {},
-          "pagination":{
-                    "mode":"generic",
-                    "path":[],
-                    "params":{
-                        "page":"{page_number}",
-                        "pagesize":"{page_size}"
-                    }
-                }
+          "query_parameters": {}
         },
         "authentication": "basic_auth",
         "call_handling": "generic",
